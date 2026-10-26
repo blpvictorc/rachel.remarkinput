@@ -653,6 +653,8 @@
         }
 
         function saveStoredRecords(records) {
+            async function exportMergedExcel() { // 💡 呢度就是你要加嘅位置：記錄用家真係撳咗「輸出 Final Packing List」 
+            trackToolFunction("Export_Final_Excel", "Exported merged Excel packing list");
             localStorage.setItem(STORAGE_KEY_RECORDS, JSON.stringify(records));
             updateRecordBadge();
         }
